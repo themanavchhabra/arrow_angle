@@ -53,7 +53,8 @@ def getContours(img, imgContour):
         area=cv2.contourArea(contour)
         if(area>2000):
             points = cv2.approxPolyDP(contour, 0.01 * cv2.arcLength(contour, True), True)
-
+            print(points)
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
             M = cv2.moments(contour)
             if M['m00'] != 0.0:
                 x = int(M['m10']/M['m00'])
